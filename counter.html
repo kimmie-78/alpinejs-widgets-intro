@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      body{
+    padding: 0 15px;
+    min-height: 100vh;
+    background: #fbceb1;
+  }
+  /*css for border box*/
+  .wrapper{
+    width: 510px;
+    padding: 40px 40px 58px;
+    background: #fff;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(183,65,14);
+  }
+
+  .wrapper h1{
+    font-size: 42px;
+    font-weight: 500;
+    margin: 30px 0;
+  }
+  
+    </style>
 </head>
 <body>
+  <div class="wrapper">
+
     <div x-data="{ count : 0 } ">
         <h1>Counter</h1>
         <div class="counter" x-text="count"></div>
@@ -15,6 +40,7 @@
         </div>
         <a href="index.html"> Dom Counter</a>
         <script src="//unpkg.com/alpinejs" defer></script>
+  </div>
   </div>
 </body>
 </html>
