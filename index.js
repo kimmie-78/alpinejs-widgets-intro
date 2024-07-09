@@ -10,6 +10,8 @@ incrementBtn.addEventListener('click', function() {
 });
 
 decrementBtn.addEventListener('click', function() {
-    counter--;
-    counterElem.innerText = counter;
+    if (counter > 0) {
+        counter--;
+        counterElem.innerText = counter;
+    }
 });

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
         body {
-            background: #F4BB44;
+            background: #F88379;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
-  
+
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -23,16 +24,22 @@
             width: 510px;
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 10px 25px rgb(192, 64, 0);
+            box-shadow: 0 10px 25px rgba(183, 65, 14, 0.5);
             padding: 20px;
         }
-  
+
         .wrapper h1 {
             font-size: 42px;
             font-weight: 500;
             margin: 30px 0;
         }
-  
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
         .button {
             padding: 10px 20px;
             background-color: #b7410e;
@@ -41,27 +48,22 @@
             border-radius: 5px;
             cursor: pointer;
         }
-  
+
         .button:hover {
             background-color: #993d00;
         }
     </style>
 </head>
+
 <body>
-    <div class="wrapper">
-        <h1>Message widget</h1>
-        <div x-data="{ message: '', enteredMessage: '' }">
-            <div x-text="message"></div>
-            <input type="text" x-model="enteredMessage" placeholder="Enter your message">
-            <button class="button" x-on:click="message = enteredMessage">Show message</button>
-        </div>
-        <br>
-        <br>
-        <div class="button-container"  x-data="{ goToPage(page) { window.location.href = page; } }">
+    <div class="wrapper" x-data="{ goToPage(page) { window.location.href = page; } }">
+        <h1>AlpineJS Widgets </h1>
+        <div class="button-container">
             <button class="button" @click="goToPage('index.html')">Go to Dom</button>
-            <button class="button" @click="goToPage('counter.html')">Go to Counter</button>
-            <button class="button" @click="goToPage('mainmenu.html')">Main Menu</button>
+            <button class="button" @click="goToPage('counter.html')">Go to Alpine</button>
+            <button class="button" @click="goToPage('message.html')">Go to Message</button>
         </div>
     </div>
 </body>
+
 </html>
